@@ -1216,23 +1216,23 @@ body {
     
     /* Better alignment for tablet */
     .card-1 {
-        top: 3%;
-        left: 5%;
+        top: 3% !important;
+        left: 5% !important;
     }
     
     .card-2 {
-        top: 3%;
-        right: 5%;
+        top: 3% !important;
+        right: 5% !important;
     }
     
     .card-3 {
-        top: 50%;
-        left: 8%;
+        top: 50% !important;
+        left: 8% !important;
     }
     
     .card-4 {
-        top: 50%;
-        right: 8%;
+        top: 50% !important;
+        right: 8% !important;
     }
     
     
@@ -1247,9 +1247,9 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .hero-title-section {
-        top: 130px;
+        top: 100px;
     }
     
     .pokemon-title-image {
@@ -1265,29 +1265,38 @@ body {
     }
     
     .floating-card {
-        width: 120px;
-        height: 85px;
+        width: 100px;
+        height: 80px;
     }
     
     /* Better alignment for mobile */
+    .floating-cards { 
+        position: relative !important; 
+        height: 100vh !important;
+    }
+    .floating-card { 
+        position: absolute !important; 
+        z-index: 999 !important;
+    }
+    
     .card-1 {
-        top: 2%;
-        left: 3%;
+        top: 1% !important;
+        left: 5% !important;
     }
     
     .card-2 {
-        top: 2%;
-        right: 3%;
+        top: 1% !important;
+        right: 5% !important;
     }
     
     .card-3 {
-        top: 48%;
-        left: 5%;
+        top: 30% !important;
+        left: 8% !important;
     }
     
     .card-4 {
-        top: 48%;
-        right: 5%;
+        top: 30% !important;
+        right: 8% !important;
     }
     
 }
@@ -6183,14 +6192,23 @@ html, body, .site, .ct-main {
     /* Even more specific mobile background sizing */
     html, body {
         background: url('/wp-content/uploads/2025/08/brickwall.png') center center scroll no-repeat !important;
-        background-size: 100% auto !important;
+        background-size: cover !important;
         background-position: center top !important;
         background-attachment: scroll !important;
         -webkit-background-attachment: scroll !important;
-        -webkit-background-size: 100% auto !important;
-        -moz-background-size: 100% auto !important;
-        -o-background-size: 100% auto !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
         min-height: 100vh !important;
+    }
+}
+
+/* MOBILE BACKGROUND - MATCH DESKTOP APPROACH */
+@media screen and (max-width: 768px) {
+    html, body, .site, .ct-main {
+        min-height: 100%;
+        background: url('/wp-content/uploads/2025/08/brickwall.png') center center fixed no-repeat !important;
+        background-size: cover !important;
     }
 }
 
@@ -6203,13 +6221,13 @@ html, body, .site, .ct-main {
     /* Force the brickwall background on mobile */
     html, body {
         background: url('/wp-content/uploads/2025/08/brickwall.png') center center scroll no-repeat !important;
-        background-size: 100% auto !important;
+        background-size: cover !important;
         background-position: center top !important;
         background-attachment: scroll !important;
         -webkit-background-attachment: scroll !important;
-        -webkit-background-size: 100% auto !important;
-        -moz-background-size: 100% auto !important;
-        -o-background-size: 100% auto !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
         min-height: 100vh !important;
     }
     
