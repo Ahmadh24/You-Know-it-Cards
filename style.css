@@ -6284,3 +6284,12 @@ html, body, .site, .ct-main {
         background-image: none !important;
     }
 }
+
+
+/* TEST - SOLID RED BACKGROUND FOR MOBILE */
+@media screen and (max-width: 768px) {
+    html, body {
+        background: red !important;
+        min-height: 100vh !important;
+    }
+}
