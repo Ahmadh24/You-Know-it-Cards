@@ -7,6 +7,16 @@
 
 get_header(); ?>
 
+<style>
+/* TEST - SOLID RED BACKGROUND FOR MOBILE */
+@media screen and (max-width: 768px) {
+    html, body {
+        background: red !important;
+        min-height: 100vh !important;
+    }
+}
+</style>
+
 <!-- Hero Section -->
 <section class="hero-section">
     <div class="hero-banner">
