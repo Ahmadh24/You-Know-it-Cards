@@ -169,7 +169,7 @@ get_header(); ?>
 
 .event-header {
     padding: 40px;
-    background: linear-gradient(135deg, var(--medium-purple), var(--bright-purple));
+    background: transparent;
     color: white;
     border-bottom: 3px solid var(--primary-color);
 }
@@ -313,7 +313,7 @@ get_header(); ?>
 
 .event-actions {
     padding: 30px 40px;
-    background: linear-gradient(135deg, var(--dark-purple), var(--medium-purple));
+    background: transparent;
     display: flex;
     gap: 15px;
     justify-content: center;
