@@ -13,6 +13,13 @@ get_header(); ?>
         background-size: auto !important;
         background-color: transparent !important;
     }
+    
+    /* Target header area specifically */
+    .site-header, .header, .header-logo, .site-branding, .ct-header, .ct-header-row, .ct-header-column, .ct-header-widget, .ct-header-social, .ct-header-search, .ct-header-cart, .ct-header-button, .ct-header-text, .ct-header-image, .ct-header-video, .ct-header-slider, .ct-header-banner, .ct-header-overlay, .ct-header-background, .ct-header-content, .ct-header-inner, .ct-header-container, .ct-header-wrapper, .ct-header-main, .ct-header-top, .ct-header-bottom, .ct-header-left, .ct-header-right, .ct-header-center, .ct-header-full, .ct-header-sticky, .ct-header-fixed, .ct-header-absolute, .ct-header-relative, .ct-header-static, .ct-header-transparent, .ct-header-opaque, .ct-header-solid, .ct-header-gradient, .ct-header-image-bg, .ct-header-video-bg, .ct-header-parallax, .ct-header-scroll, .ct-header-hover, .ct-header-active, .ct-header-focus, .ct-header-selected, .ct-header-current, .ct-header-parent, .ct-header-child, .ct-header-sibling, .ct-header-ancestor, .ct-header-descendant, .ct-header-first, .ct-header-last, .ct-header-only, .ct-header-empty, .ct-header-not, .ct-header-has, .ct-header-without, .ct-header-before, .ct-header-after, .ct-header-first-child, .ct-header-last-child, .ct-header-only-child, .ct-header-nth-child, .ct-header-nth-last-child, .ct-header-nth-of-type, .ct-header-nth-last-of-type, .ct-header-first-of-type, .ct-header-last-of-type, .ct-header-only-of-type, .ct-header-target, .ct-header-enabled, .ct-header-disabled, .ct-header-checked, .ct-header-indeterminate, .ct-header-valid, .ct-header-invalid, .ct-header-required, .ct-header-optional, .ct-header-read-only, .ct-header-read-write, .ct-header-in-range, .ct-header-out-of-range, .ct-header-placeholder-shown, .ct-header-default, .ct-header-visited, .ct-header-link {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+        background-color: transparent !important;
+    }
 }
 
 /* LANDSCAPE MOBILE BRICK BACKGROUND */
