@@ -5,6 +5,24 @@
 
 get_header(); ?>
 
+<style>
+/* MOBILE BRICK BACKGROUND - INLINE CSS */
+@media screen and (max-width: 768px) {
+    html, body {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+    }
+}
+
+/* LANDSCAPE MOBILE BRICK BACKGROUND */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    html, body {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+    }
+}
+</style>
+
 <div class="archive-collection-showcase">
     <div class="container">
         <header class="archive-header">
