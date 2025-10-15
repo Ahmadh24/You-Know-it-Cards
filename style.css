@@ -6286,10 +6286,4 @@ html, body, .site, .ct-main {
 }
 
 
-/* TEST - SOLID RED BACKGROUND FOR MOBILE */
-@media screen and (max-width: 768px) {
-    html, body {
-        background: red !important;
-        min-height: 100vh !important;
-    }
-}
+
