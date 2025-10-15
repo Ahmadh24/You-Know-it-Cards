@@ -103,7 +103,6 @@ get_header(); ?>
 <style>
 .events-archive-page {
     padding: 40px 0;
-    background: var(--dark-bg);
     min-height: 100vh;
 }
 

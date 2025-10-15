@@ -144,7 +144,6 @@ get_header(); ?>
 <style>
 .event-single-page {
     padding: 40px 0;
-    background: var(--dark-bg);
     min-height: 100vh;
 }
 
