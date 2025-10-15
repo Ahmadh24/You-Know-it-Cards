@@ -8,17 +8,19 @@ get_header(); ?>
 <style>
 /* MOBILE BRICK BACKGROUND - INLINE CSS */
 @media screen and (max-width: 768px) {
-    html, body, .event-single-page {
+    html, body, .site, .ct-main, .event-single-page, .container, .archive-header, .event-single, .event-header, .event-content, .event-meta-header, .event-meta-item, .event-description, .event-details, .event-actions, .event-sidebar, .event-gallery, .event-related, .event-footer, .ct-page-header, .ct-container, .entry-content, .wp-block-group, [data-overlay], [data-overlay]::before, .has-background-gradient, .has-background-gradient::before, .section-header, .card-item, .event-item, .tip-card, .trading-tips-content, .social-media-section, .ct-footer, footer, .footer-content, .main-navigation, .nav-menu, .widget-area, .sidebar, .widget, .widget-title, .widget-content, .main-content, .content-area, .wp-block-column, .wp-block-row, .wp-block-buttons, .wp-block-button, .wp-block-image, .wp-block-gallery, .wp-block-cover, .wp-block-media-text {
         background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
         background-size: auto !important;
+        background-color: transparent !important;
     }
 }
 
 /* LANDSCAPE MOBILE BRICK BACKGROUND */
 @media screen and (max-height: 500px) and (orientation: landscape) {
-    html, body, .event-single-page {
+    html, body, .site, .ct-main, .event-single-page, .container, .archive-header, .event-single, .event-header, .event-content, .event-meta-header, .event-meta-item, .event-description, .event-details, .event-actions, .event-sidebar, .event-gallery, .event-related, .event-footer, .ct-page-header, .ct-container, .entry-content, .wp-block-group, [data-overlay], [data-overlay]::before, .has-background-gradient, .has-background-gradient::before, .section-header, .card-item, .event-item, .tip-card, .trading-tips-content, .social-media-section, .ct-footer, footer, .footer-content, .main-navigation, .nav-menu, .widget-area, .sidebar, .widget, .widget-title, .widget-content, .main-content, .content-area, .wp-block-column, .wp-block-row, .wp-block-buttons, .wp-block-button, .wp-block-image, .wp-block-gallery, .wp-block-cover, .wp-block-media-text {
         background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
         background-size: auto !important;
+        background-color: transparent !important;
     }
 }
 </style>
