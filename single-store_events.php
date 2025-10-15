@@ -338,12 +338,12 @@ get_header(); ?>
     font-weight: 700;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     background: #ffed4e;
     transform: translateY(-2px);
     box-shadow: var(--neon-glow);
     color: var(--dark-bg);
-}
+} */
 
 .btn-secondary {
     background: transparent;
@@ -351,12 +351,12 @@ get_header(); ?>
     border: 2px solid var(--accent-color);
 }
 
-.btn-secondary:hover {
+/* .btn-secondary:hover {
     background: var(--accent-color);
     color: var(--dark-bg);
     transform: translateY(-2px);
     box-shadow: var(--neon-glow-blue);
-}
+} */
 
 @media (max-width: 768px) {
     .event-header {
