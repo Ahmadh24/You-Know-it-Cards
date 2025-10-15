@@ -11,8 +11,8 @@ get_header(); ?>
 /* MOBILE BRICK BACKGROUND - INLINE CSS */
 @media screen and (max-width: 768px) {
     html, body {
-        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center fixed no-repeat !important;
-        background-size: 200% 550vh !important;
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll no-repeat !important;
+        background-size: cover !important;
         /* min-height: 100vh !important; */
     }
 }
