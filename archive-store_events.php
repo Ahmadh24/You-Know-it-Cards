@@ -19,6 +19,13 @@ html, body, .site, .ct-main, .events-archive-page, .container, .archive-header, 
     background-size: auto !important;
     background-color: transparent !important;
 }
+
+/* Target footer area specifically */
+.ct-footer, footer, .footer-content, .footer-widgets, .footer-widget, .footer-widget-title, .footer-widget-content, .footer-column, .footer-row, .footer-container, .footer-wrapper, .footer-main, .footer-top, .footer-bottom, .footer-left, .footer-right, .footer-center, .footer-full, .footer-sticky, .footer-fixed, .footer-absolute, .footer-relative, .footer-static, .footer-transparent, .footer-opaque, .footer-solid, .footer-gradient, .footer-image-bg, .footer-video-bg, .footer-parallax, .footer-scroll, .footer-hover, .footer-active, .footer-focus, .footer-selected, .footer-current, .footer-parent, .footer-child, .footer-sibling, .footer-ancestor, .footer-descendant, .footer-first, .footer-last, .footer-only, .footer-empty, .footer-not, .footer-has, .footer-without, .footer-before, .footer-after, .footer-first-child, .footer-last-child, .footer-only-child, .footer-nth-child, .footer-nth-last-child, .footer-nth-of-type, .footer-nth-last-of-type, .footer-first-of-type, .footer-last-of-type, .footer-only-of-type, .footer-target, .footer-enabled, .footer-disabled, .footer-checked, .footer-indeterminate, .footer-valid, .footer-invalid, .footer-required, .footer-optional, .footer-read-only, .footer-read-write, .footer-in-range, .footer-out-of-range, .footer-placeholder-shown, .footer-default, .footer-visited, .footer-link {
+    background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+    background-size: auto !important;
+    background-color: transparent !important;
+}
 </style>
 
 <div class="events-archive-page">
