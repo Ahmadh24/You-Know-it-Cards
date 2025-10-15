@@ -306,10 +306,10 @@ get_header(); ?>
     border-bottom: 1px solid var(--accent-color);
 }
 
-.event-content a:hover {
+/* .event-content a:hover {
     color: var(--primary-color);
     border-bottom-color: var(--primary-color);
-}
+} */
 
 .event-actions {
     padding: 30px 40px;

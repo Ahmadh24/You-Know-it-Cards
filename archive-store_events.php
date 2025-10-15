@@ -155,11 +155,11 @@ get_header(); ?>
     border-top: 4px solid var(--primary-color);
 }
 
-.event-card:hover {
+/* .event-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     border-color: var(--primary-color);
-}
+} */
 
 .event-image {
     position: relative;
@@ -174,9 +174,9 @@ get_header(); ?>
     transition: var(--transition);
 }
 
-.event-card:hover .event-image img {
+/* .event-card:hover .event-image img {
     transform: scale(1.05);
-}
+} */
 
 .event-content {
     padding: 25px;
@@ -198,9 +198,9 @@ get_header(); ?>
     display: block;
 }
 
-.event-title a:hover {
+/* .event-title a:hover {
     color: var(--primary-color);
-}
+} */
 
 .event-excerpt {
     color: #cccccc;
@@ -253,10 +253,10 @@ get_header(); ?>
     align-self: flex-start;
 }
 
-.event-link:hover {
+/* .event-link:hover {
     color: var(--accent-color);
     transform: translateX(5px);
-}
+} */
 
 .no-events {
     text-align: center;
@@ -301,10 +301,10 @@ get_header(); ?>
     transition: var(--transition);
 }
 
-.wp-pagenavi a:hover {
+/* .wp-pagenavi a:hover {
     background: var(--primary-color);
     border-color: var(--primary-color);
-}
+} */
 
 .wp-pagenavi .current {
     background: var(--primary-color);
