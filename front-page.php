@@ -12,7 +12,7 @@ get_header(); ?>
 @media screen and (max-width: 768px) {
     html, body {
         background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center fixed no-repeat !important;
-        background-size: 100% 150vh !important;
+        background-size: 100% 550vh !important;
         /* min-height: 100vh !important; */
     }
 }
