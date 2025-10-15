@@ -13,7 +13,7 @@ get_header(); ?>
     html, body {
         background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center fixed no-repeat !important;
         background-size: 500% auto !important;
-        min-height: 100vh !important;
+        /* min-height: 100vh !important; */
     }
 }
 </style>
