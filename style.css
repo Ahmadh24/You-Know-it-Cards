@@ -6070,16 +6070,6 @@ html, body, .site, .ct-main {
         box-shadow: none !important;
     }
     
-    /* Ensure banner doesn't interfere with text selection */
-    .hero-banner *,
-    .hero-banner-image *,
-    .hero-banner img {
-        pointer-events: none !important;
-        user-select: none !important;
-        -webkit-user-select: none !important;
-        -moz-user-select: none !important;
-        -ms-user-select: none !important;
-    }
 }
 
 /* Small mobile banner optimization */
