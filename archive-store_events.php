@@ -26,6 +26,13 @@ html, body, .site, .ct-main, .events-archive-page, .container, .archive-header, 
     background-size: auto !important;
     background-color: transparent !important;
 }
+
+/* Force brick background on ALL elements */
+* {
+    background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+    background-size: auto !important;
+    background-color: transparent !important;
+}
 </style>
 
 <div class="events-archive-page">
