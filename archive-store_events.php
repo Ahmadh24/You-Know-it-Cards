@@ -5,6 +5,33 @@
 
 get_header(); ?>
 
+<style>
+/* MOBILE BRICK BACKGROUND - INLINE CSS */
+@media screen and (max-width: 768px) {
+    html, body {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+    }
+}
+
+/* LANDSCAPE MOBILE BRICK BACKGROUND */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    html, body {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+    }
+
+    /* Center content in landscape mode */
+    .hero-section, .hero-content, .hero-title-section {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .hero-main-title {
+        text-align: center !important;
+    }
+}
+</style>
 
 <div class="events-archive-page">
     <div class="container">
