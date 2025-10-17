@@ -6034,7 +6034,7 @@ html, body, .site, .ct-main {
     html body .hero-section .hero-buttons,
     html body .hero-section > .hero-buttons,
     html body .hero-section div.hero-buttons {
-        margin-top: 40px !important;
+        margin-top: 10px !important;
         margin-bottom: 50px !important;
         position: relative !important;
         z-index: 7 !important;
