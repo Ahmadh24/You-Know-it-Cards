@@ -6001,6 +6001,19 @@ html, body, .site, .ct-main {
     }
 }
 
+/* ===== FORCE BUTTON POSITIONING - MAXIMUM SPECIFICITY ===== */
+@media (max-width: 768px) {
+    /* Force buttons to move up with maximum specificity */
+    html body .site .hero-section .hero-content-below-banner .hero-buttons,
+    html body .site .hero-section > .hero-content-below-banner > .hero-buttons,
+    html body .site .hero-section div.hero-content-below-banner div.hero-buttons {
+        margin-top: -20px !important;
+        margin-bottom: 30px !important;
+        position: relative !important;
+        z-index: 999 !important;
+    }
+}
+
 /* ===== UNIVERSAL MOBILE OVERRIDE - HIGHEST PRIORITY ===== */
 @media (max-width: 768px) {
     /* Force mobile positioning with maximum specificity */
