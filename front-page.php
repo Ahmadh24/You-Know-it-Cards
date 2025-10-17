@@ -81,7 +81,7 @@ get_header(); ?>
     <div class="hero-content-below-banner">
         <p class="hero-subtitle">Your premier destination for Pokémon, One Piece, and Sports cards</p>
         
-        <div class="hero-buttons">
+        <div class="hero-buttons" style="margin-top: -30px !important; margin-bottom: 30px !important;">
             <a href="#cards" class="btn btn-primary btn-glow">
                 <span class="btn-text">Explore Cards</span>
                 <span class="btn-icon">→</span>
