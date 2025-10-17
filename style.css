@@ -5428,7 +5428,7 @@ html, body, .site, .ct-main {
     .hero-section .hero-buttons,
     .hero-section > .hero-buttons,
     .hero-section div.hero-buttons {
-        margin-top: 40px !important;
+        margin-top: 10px !important;
         margin-bottom: 50px !important;
         position: relative !important;
         z-index: 7 !important;
