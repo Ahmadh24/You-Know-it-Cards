@@ -76,7 +76,7 @@ get_header(); ?>
     .hero-buttons .btn-icon:hover {
         transition: none !important;
         animation: none !important;
-        transform: translateY(250px) !important;
+        transform: translateY(150px) !important;
         -webkit-transition: none !important;
         -moz-transition: none !important;
         -o-transition: none !important;
