@@ -39,7 +39,7 @@ get_header(); ?>
     .hero-buttons {
         margin-top: -300px !important;
         margin-bottom: 30px !important;
-        transform: translateY(350px) !important;
+        transform: translateY(250px) !important;
         position: relative !important;
         z-index: 999 !important;
     }
