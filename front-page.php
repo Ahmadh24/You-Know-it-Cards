@@ -43,6 +43,16 @@ get_header(); ?>
         z-index: 999 !important;
     }
     
+    /* Make buttons pill-shaped on mobile */
+    .hero-buttons .btn {
+        border-radius: 50px !important;
+        padding: 15px 30px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+    }
+    
     .hero-subtitle {
         margin-top: -350px !important;
         margin-bottom: 20px !important;
