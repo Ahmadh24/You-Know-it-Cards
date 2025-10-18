@@ -45,12 +45,16 @@ get_header(); ?>
     
     /* Make buttons pill-shaped on mobile */
     .hero-buttons .btn {
-        border-radius: 50px !important;
-        padding: 15px 30px !important;
-        font-size: 16px !important;
-        font-weight: 600 !important;
+        border-radius: 100px !important;
+        padding: 20px 40px !important;
+        font-size: 18px !important;
+        font-weight: 700 !important;
         text-transform: uppercase !important;
-        letter-spacing: 1px !important;
+        letter-spacing: 2px !important;
+        min-height: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
     
     .hero-subtitle {
