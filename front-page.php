@@ -61,7 +61,6 @@ get_header(); ?>
     .hero-buttons .btn-icon {
         transition: none !important;
         animation: none !important;
-        transform: none !important;
         -webkit-transition: none !important;
         -moz-transition: none !important;
         -o-transition: none !important;
@@ -77,10 +76,14 @@ get_header(); ?>
     .hero-buttons .btn-icon:hover {
         transition: none !important;
         animation: none !important;
-        transform: none !important;
         -webkit-transition: none !important;
         -moz-transition: none !important;
         -o-transition: none !important;
+    }
+    
+    /* OVERRIDE: Force button positioning after disabling animations */
+    .hero-buttons {
+        transform: translateY(350px) !important;
     }
 }
 </style>
