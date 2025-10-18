@@ -6013,8 +6013,8 @@ html, body, .site, .ct-main {
     
     /* Mobile-only: Move subtitle text above buttons */
     .hero-subtitle {
-        margin-top: -230px !important;
-        margin-bottom: 120px !important;
+        margin-top: -30px !important;
+        margin-bottom: 20px !important;
         position: relative !important;
         z-index: 1000 !important;
     }
