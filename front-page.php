@@ -13,24 +13,7 @@ get_header(); ?>
     html, body {
         background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
         background-size: auto !important;
-    }
-}
-
-/* LANDSCAPE MOBILE BRICK BACKGROUND */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    html, body {
-        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
-        background-size: auto !important;
-    }
-    
-    /* Center content in landscape mode */
-    .hero-section, .hero-content, .hero-title-section {
-        text-align: center !important;
-        justify-content: center !important;
-    }
-    
-    .hero-main-title {
-        text-align: center !important;
+        /* min-height: 100vh !important; */
     }
 }
 </style>
@@ -81,7 +64,7 @@ get_header(); ?>
     <div class="hero-content-below-banner">
         <p class="hero-subtitle">Your premier destination for Pokémon, One Piece, and Sports cards</p>
         
-        <div class="hero-buttons" style="margin-top: -50px !important; margin-bottom: 30px !important; transform: translateY(-20px) !important; position: relative !important; z-index: 999 !important;">
+        <div class="hero-buttons">
             <a href="#cards" class="btn btn-primary btn-glow">
                 <span class="btn-text">Explore Cards</span>
                 <span class="btn-icon">→</span>
