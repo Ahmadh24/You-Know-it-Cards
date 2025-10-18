@@ -33,6 +33,23 @@ get_header(); ?>
         text-align: center !important;
     }
 }
+
+/* MOBILE BUTTONS POSITIONING - FRONT PAGE ONLY */
+@media screen and (max-width: 768px) {
+    .hero-buttons {
+        margin-top: -100px !important;
+        margin-bottom: 30px !important;
+        position: relative !important;
+        z-index: 999 !important;
+    }
+    
+    .hero-subtitle {
+        margin-top: -50px !important;
+        margin-bottom: 20px !important;
+        position: relative !important;
+        z-index: 1000 !important;
+    }
+}
 </style>
 
 <!-- Hero Section -->
