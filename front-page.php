@@ -81,7 +81,7 @@ get_header(); ?>
     <div class="hero-content-below-banner">
         <p class="hero-subtitle" style="margin-top: -400px !important; margin-bottom: 20px !important; position: relative !important; z-index: 1000 !important;">Your premier destination for Pokémon, One Piece, and Sports cards</p>
         
-        <div class="hero-buttons" style="margin-top: -250px !important; margin-bottom: 30px !important; transform: translateY(-40px) !important; position: relative !important; z-index: 999 !important;">
+        <div class="hero-buttons" style="margin-top: -550px !important; margin-bottom: 30px !important; transform: translateY(-40px) !important; position: relative !important; z-index: 999 !important;">
             <a href="#cards" class="btn btn-primary btn-glow">
                 <span class="btn-text">Explore Cards</span>
                 <span class="btn-icon">→</span>
