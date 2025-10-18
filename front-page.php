@@ -37,7 +37,7 @@ get_header(); ?>
 /* MOBILE BUTTONS POSITIONING - FRONT PAGE ONLY */
 @media screen and (max-width: 768px) {
     .hero-buttons {
-        margin-top: -400px !important;
+        margin-top: -300px !important;
         margin-bottom: 30px !important;
         transform: translateY(150px) !important;
         position: relative !important;
