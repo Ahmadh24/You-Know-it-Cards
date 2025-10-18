@@ -37,8 +37,9 @@ get_header(); ?>
 /* MOBILE BUTTONS POSITIONING - FRONT PAGE ONLY */
 @media screen and (max-width: 768px) {
     .hero-buttons {
-        margin-top: -300px !important;
+        margin-top: -400px !important;
         margin-bottom: 30px !important;
+        transform: translateY(50px) !important;
         position: relative !important;
         z-index: 999 !important;
     }
@@ -46,6 +47,7 @@ get_header(); ?>
     .hero-subtitle {
         margin-top: -350px !important;
         margin-bottom: 20px !important;
+        transform: translateY(0px) !important;
         position: relative !important;
         z-index: 1000 !important;
     }
