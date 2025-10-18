@@ -47,7 +47,7 @@ get_header(); ?>
     .hero-subtitle {
         margin-top: -350px !important;
         margin-bottom: 20px !important;
-        transform: translateY(-150px) !important;
+        transform: translateY(-200px) !important;
         position: relative !important;
         z-index: 1000 !important;
     }
