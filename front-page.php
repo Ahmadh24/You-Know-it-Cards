@@ -53,6 +53,10 @@ get_header(); ?>
     }
     
     /* Disable button animations on mobile */
+    .hero-buttons {
+        transition: none !important;
+    }
+    
     .hero-buttons .btn {
         transition: none !important;
         transform: none !important;
@@ -61,6 +65,13 @@ get_header(); ?>
     .hero-buttons .btn:hover,
     .hero-buttons .btn:active,
     .hero-buttons .btn:focus {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .hero-buttons:hover,
+    .hero-buttons:active,
+    .hero-buttons:focus {
         transform: none !important;
         transition: none !important;
     }
