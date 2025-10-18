@@ -52,28 +52,35 @@ get_header(); ?>
         z-index: 1000 !important;
     }
     
-    /* Disable button animations on mobile */
-    .hero-buttons {
+    /* AGGRESSIVE: Disable ALL animations on mobile */
+    .hero-buttons,
+    .hero-buttons *,
+    .hero-buttons .btn,
+    .hero-buttons .btn *,
+    .hero-buttons .btn-text,
+    .hero-buttons .btn-icon {
         transition: none !important;
-    }
-    
-    .hero-buttons .btn {
-        transition: none !important;
+        animation: none !important;
         transform: none !important;
-    }
-    
-    .hero-buttons .btn:hover,
-    .hero-buttons .btn:active,
-    .hero-buttons .btn:focus {
-        transform: none !important;
-        transition: none !important;
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
     }
     
     .hero-buttons:hover,
     .hero-buttons:active,
-    .hero-buttons:focus {
-        transform: none !important;
+    .hero-buttons:focus,
+    .hero-buttons .btn:hover,
+    .hero-buttons .btn:active,
+    .hero-buttons .btn:focus,
+    .hero-buttons .btn-text:hover,
+    .hero-buttons .btn-icon:hover {
         transition: none !important;
+        animation: none !important;
+        transform: none !important;
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
     }
 }
 </style>
