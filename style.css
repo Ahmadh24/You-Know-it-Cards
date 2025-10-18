@@ -6006,7 +6006,7 @@ html, body, .site, .ct-main {
     /* Force buttons to move up with absolute positioning */
     .hero-buttons {
         position: absolute !important;
-        top: 60% !important;
+        top: 90% !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         margin-top: 0 !important;
