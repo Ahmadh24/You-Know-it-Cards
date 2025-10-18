@@ -6001,29 +6001,22 @@ html, body, .site, .ct-main {
     }
 }
 
-/* ===== ULTRA-AGGRESSIVE MOBILE POSITIONING ===== */
-@media screen and (max-width: 768px) {
-    /* Force buttons to move up with absolute positioning */
+/* ===== MOBILE-ONLY HERO BUTTONS POSITIONING ===== */
+@media (max-width: 768px) {
+    /* Mobile-only: Move buttons up closer to title */
     .hero-buttons {
-        position: absolute !important;
-        top: 90% !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
+        margin-top: -50px !important;
+        margin-bottom: 30px !important;
+        position: relative !important;
         z-index: 999 !important;
     }
     
-    /* Force subtitle to appear above buttons */
+    /* Mobile-only: Move subtitle text above buttons */
     .hero-subtitle {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
+        margin-top: -30px !important;
+        margin-bottom: 20px !important;
+        position: relative !important;
         z-index: 1000 !important;
-        text-align: center !important;
     }
 }
 
