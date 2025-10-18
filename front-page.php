@@ -37,9 +37,8 @@ get_header(); ?>
 /* MOBILE BUTTONS POSITIONING - FRONT PAGE ONLY */
 @media screen and (max-width: 768px) {
     .hero-buttons {
-        margin-top: -300px !important;
+        margin-top: -50px !important;
         margin-bottom: 30px !important;
-        transform: translateY(250px) !important;
         position: relative !important;
         z-index: 999 !important;
     }
@@ -76,16 +75,11 @@ get_header(); ?>
     .hero-buttons .btn-icon:hover {
         transition: none !important;
         animation: none !important;
-        transform: translateY(150px) !important;
         -webkit-transition: none !important;
         -moz-transition: none !important;
         -o-transition: none !important;
     }
     
-    /* OVERRIDE: Force button positioning after disabling animations */
-    .hero-buttons {
-        transform: translateY(350px) !important;
-    }
 }
 </style>
 
