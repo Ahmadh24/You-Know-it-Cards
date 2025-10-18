@@ -39,7 +39,7 @@ get_header(); ?>
     .hero-buttons {
         margin-top: -400px !important;
         margin-bottom: 30px !important;
-        transform: translateY(100px) !important;
+        transform: translateY(200px) !important;
         position: relative !important;
         z-index: 999 !important;
     }
@@ -47,7 +47,7 @@ get_header(); ?>
     .hero-subtitle {
         margin-top: -350px !important;
         margin-bottom: 20px !important;
-        transform: translateY(-50px) !important;
+        transform: translateY(-100px) !important;
         position: relative !important;
         z-index: 1000 !important;
     }
