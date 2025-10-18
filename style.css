@@ -6014,7 +6014,7 @@ html, body, .site, .ct-main {
     /* Mobile-only: Move subtitle text above buttons */
     .hero-subtitle {
         margin-top: -230px !important;
-        margin-bottom: 420px !important;
+        margin-bottom: 620px !important;
         position: relative !important;
         z-index: 1000 !important;
     }
