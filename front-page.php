@@ -44,7 +44,7 @@ get_header(); ?>
     }
     
     .hero-subtitle {
-        margin-top: -50px !important;
+        margin-top: -100px !important;
         margin-bottom: 20px !important;
         position: relative !important;
         z-index: 1000 !important;
