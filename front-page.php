@@ -51,6 +51,19 @@ get_header(); ?>
         position: relative !important;
         z-index: 1000 !important;
     }
+    
+    /* Disable button animations on mobile */
+    .hero-buttons .btn {
+        transition: none !important;
+        transform: none !important;
+    }
+    
+    .hero-buttons .btn:hover,
+    .hero-buttons .btn:active,
+    .hero-buttons .btn:focus {
+        transform: none !important;
+        transition: none !important;
+    }
 }
 </style>
 
