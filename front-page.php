@@ -95,6 +95,22 @@ get_header(); ?>
     }
     
 }
+
+/* NARROW PHONES: iPhone 15 Pro width and below – lower subtitle slightly */
+@media screen and (max-width: 393px) { /* 393px logical width for iPhone 15 Pro */
+    .hero-subtitle {
+        margin-top: -300px !important; /* was -350px */
+        transform: translateY(-110px) !important; /* reduce lift */
+    }
+}
+
+/* LARGE TABLETS: iPad Pro 12.9" – unzoom brick by repeating with auto sizing */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+    html, body {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center top scroll repeat !important;
+        background-size: auto !important; /* tile bricks to avoid zoom */
+    }
+}
 </style>
 
 <!-- Hero Section -->
