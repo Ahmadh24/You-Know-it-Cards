@@ -184,32 +184,7 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- Pokémon Cards Section -->
-<section class="category-section">
-    <div class="section-header">
-        <h2 class="section-title">Pokémon Cards</h2>
-        <p class="section-subtitle">Collect the rarest and most powerful Pokémon cards</p>
-    </div>
-    <?php echo do_shortcode('[pokemon_cards_grid posts_per_page="6" columns="3"]'); ?>
-</section>
-
-<!-- One Piece Cards Section -->
-<section class="category-section">
-    <div class="section-header">
-        <h2 class="section-title">One Piece Cards</h2>
-        <p class="section-subtitle">Join the adventure with One Piece trading cards</p>
-    </div>
-    <?php echo do_shortcode('[onepiece_cards_grid posts_per_page="6" columns="3"]'); ?>
-</section>
-
-<!-- Sports Cards Section -->
-<section class="category-section">
-    <div class="section-header">
-        <h2 class="section-title">Sports Cards</h2>
-        <p class="section-subtitle">From baseball legends to basketball stars, find your favorite sports cards</p>
-    </div>
-    <?php echo do_shortcode('[sports_cards_grid posts_per_page="6" columns="3"]'); ?>
-</section>
+<!-- Category card sections removed (have dedicated pages) -->
 
 <!-- Events Section -->
 <section class="events-section">
