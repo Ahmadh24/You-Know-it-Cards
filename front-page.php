@@ -186,14 +186,7 @@ get_header(); ?>
 
 <!-- Category card sections removed (have dedicated pages) -->
 
-<!-- Events Section -->
-<section class="events-section">
-    <div class="section-header">
-        <h2 class="section-title">Upcoming Events</h2>
-        <p class="section-subtitle">Join us for tournaments, trading sessions, and special events</p>
-    </div>
-    <?php echo do_shortcode('[store_events_grid posts_per_page="3" columns="3"]'); ?>
-</section>
+<!-- Events section removed (separate Events page exists) -->
 
 <!-- Community Section -->
 <section class="community-section">
