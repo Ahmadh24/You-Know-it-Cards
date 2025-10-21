@@ -6309,39 +6309,6 @@ html, body, .site, .ct-main {
         background-size: auto !important;
     }
     
-    /* FORCE HEADER TO TOP ON ALL LANDSCAPE MOBILE PAGES */
-    .site-header,
-    .main-navigation,
-    .nav-menu,
-    .menu-toggle,
-    .ct-header,
-    header,
-    .header,
-    .site-header-inner,
-    .ct-header-inner {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        z-index: 9999 !important;
-        background: rgba(0, 0, 0, 0.9) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        margin: 0 !important;
-        padding: 8px 20px !important;
-    }
-    
-    /* Add top padding to all content to account for fixed header in landscape */
-    .ct-main,
-    .entry-content,
-    .signup-page,
-    .hero-section,
-    .category-section,
-    .events-section {
-        padding-top: 60px !important;
-        margin-top: 0 !important;
-    }
-    
     /* Center content in landscape mode */
     .hero-section, .hero-content, .hero-title-section {
         text-align: center !important;
