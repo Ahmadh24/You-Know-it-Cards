@@ -218,19 +218,7 @@ get_header(); ?>
 
 <!-- Social media sections moved to dedicated Social Media page -->
 
-        <!-- About Section -->
-        <section class="about-section">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About YouKnowItCards</h2>
-                    <p>Your premier destination for trading cards and collectibles. We specialize in Pokémon, One Piece, and Sports cards, offering a wide selection of rare and popular items for collectors and enthusiasts.</p>
-                    <p>Visit our store to explore our collection, trade with fellow collectors, or get expert advice on building your collection.</p>
-                </div>
-                <div class="about-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/store-front.jpg" alt="YouKnowItCards Store Front">
-                </div>
-            </div>
-        </section>
+<!-- About section moved to dedicated About page -->
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
