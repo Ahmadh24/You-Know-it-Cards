@@ -7,6 +7,52 @@
 
 get_header(); ?>
 
+<style>
+/* MOBILE BRICK BACKGROUND - ULTRA AGGRESSIVE */
+@media screen and (max-width: 768px) {
+    html, body, .site, .ct-main, .signup-success-page,
+    .ct-container, .ct-content, .ct-block-content,
+    .entry-content, .wp-block-group, [data-overlay] {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+        min-height: 100vh !important;
+        background-color: transparent !important;
+    }
+    
+    /* Force ALL containers to be transparent */
+    .container, .success-content, .what-happens-next,
+    .next-steps, .help-section {
+        background: transparent !important;
+        background-color: transparent !important;
+    }
+    
+    /* Remove any white backgrounds */
+    body, .site, .ct-main {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+    }
+}
+
+/* LANDSCAPE MOBILE BRICK BACKGROUND */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    html, body, .site, .ct-main, .signup-success-page,
+    .ct-container, .ct-content, .ct-block-content,
+    .entry-content, .wp-block-group, [data-overlay] {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+        min-height: 100vh !important;
+        background-color: transparent !important;
+    }
+    
+    /* Force ALL containers to be transparent */
+    .container, .success-content, .what-happens-next,
+    .next-steps, .help-section {
+        background: transparent !important;
+        background-color: transparent !important;
+    }
+}
+</style>
+
 <div class="signup-success-page">
     <div class="container">
         <div class="success-content">

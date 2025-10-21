@@ -6320,5 +6320,58 @@ html, body, .site, .ct-main {
     }
 }
 
+/* ===== SIGNUP PAGE MOBILE BRICK BACKGROUND - MAXIMUM SPECIFICITY ===== */
+@media screen and (max-width: 768px) {
+    body.page-id-48,
+    body.page-id-48 html,
+    body.page-id-48 body,
+    body.page-id-48 .site,
+    body.page-id-48 .ct-main,
+    body.page-id-48 .signup-page,
+    body.page-id-48 .ct-container,
+    body.page-id-48 .ct-content,
+    body.page-id-48 .ct-block-content,
+    body.page-id-48 .entry-content,
+    body.page-id-48 .wp-block-group,
+    body.page-id-48 [data-overlay],
+    body.page-id-48 .container,
+    body.page-id-48 .signup-form-container,
+    body.page-id-48 .signup-form,
+    body.page-id-48 .signup-header,
+    body.page-id-48 .form-group,
+    body.page-id-48 .checkbox-group {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+        min-height: 100vh !important;
+        background-color: transparent !important;
+    }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    body.page-id-48,
+    body.page-id-48 html,
+    body.page-id-48 body,
+    body.page-id-48 .site,
+    body.page-id-48 .ct-main,
+    body.page-id-48 .signup-page,
+    body.page-id-48 .ct-container,
+    body.page-id-48 .ct-content,
+    body.page-id-48 .ct-block-content,
+    body.page-id-48 .entry-content,
+    body.page-id-48 .wp-block-group,
+    body.page-id-48 [data-overlay],
+    body.page-id-48 .container,
+    body.page-id-48 .signup-form-container,
+    body.page-id-48 .signup-form,
+    body.page-id-48 .signup-header,
+    body.page-id-48 .form-group,
+    body.page-id-48 .checkbox-group {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
+        min-height: 100vh !important;
+        background-color: transparent !important;
+    }
+}
+
 
 
