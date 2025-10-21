@@ -953,6 +953,7 @@ function ykic_default_menu() {
     echo '<li><a href="' . get_post_type_archive_link('onepiece_cards') . '">One Piece Cards</a></li>';
     echo '<li><a href="' . get_post_type_archive_link('sports_cards') . '">Sports Cards</a></li>';
     echo '<li><a href="' . get_post_type_archive_link('store_events') . '">Events</a></li>';
+    echo '<li><a href="' . home_url('/social-media/') . '">Social Media</a></li>';
     echo '<li><a href="#contact">Contact</a></li>';
     echo '</ul>';
 }
@@ -962,6 +963,33 @@ add_action( 'after_setup_theme', function() {
     register_nav_menus( array(
         'primary' => esc_html__( 'Primary Menu', 'blocksy' ),
     ) );
+});
+
+// Create Social Media page if it doesn't exist
+add_action( 'init', function() {
+    $page_title = 'Social Media';
+    $page_slug = 'social-media';
+    
+    // Check if page already exists
+    $existing_page = get_page_by_path( $page_slug );
+    
+    if ( ! $existing_page ) {
+        $page_data = array(
+            'post_title'    => $page_title,
+            'post_name'     => $page_slug,
+            'post_content'  => 'Follow YouKnowItCards on all our social media platforms!',
+            'post_status'   => 'publish',
+            'post_type'     => 'page',
+            'post_author'   => 1,
+            'page_template' => 'page-social-media.php'
+        );
+        
+        $page_id = wp_insert_post( $page_data );
+        
+        if ( $page_id ) {
+            update_post_meta( $page_id, '_wp_page_template', 'page-social-media.php' );
+        }
+    }
 });
 
 // Add admin notice to flush rewrite rules if needed
