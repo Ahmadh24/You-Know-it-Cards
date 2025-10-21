@@ -955,7 +955,6 @@ function ykic_default_menu() {
     echo '<li><a href="' . get_post_type_archive_link('store_events') . '">Events</a></li>';
     echo '<li><a href="' . home_url('/about/') . '">About</a></li>';
     echo '<li><a href="' . home_url('/social-media/') . '">Social</a></li>';
-    echo '<li><a href="#contact">Contact</a></li>';
     echo '</ul>';
 }
 
