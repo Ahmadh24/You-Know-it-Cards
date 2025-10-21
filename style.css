@@ -6345,6 +6345,29 @@ html, body, .site, .ct-main {
         min-height: 100vh !important;
         background-color: transparent !important;
     }
+    
+    /* Force header to stay at top on signup page */
+    body.page-id-48 .site-header,
+    body.page-id-48 .main-navigation,
+    body.page-id-48 .nav-menu,
+    body.page-id-48 .menu-toggle,
+    body.page-id-48 .ct-header,
+    body.page-id-48 header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 9999 !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    /* Add top padding to content to account for fixed header */
+    body.page-id-48 .signup-page,
+    body.page-id-48 .ct-main,
+    body.page-id-48 .entry-content {
+        padding-top: 80px !important;
+    }
 }
 
 @media screen and (max-height: 500px) and (orientation: landscape) {
@@ -6370,6 +6393,29 @@ html, body, .site, .ct-main {
         background-size: auto !important;
         min-height: 100vh !important;
         background-color: transparent !important;
+    }
+    
+    /* Force header to stay at top on signup page in landscape */
+    body.page-id-48 .site-header,
+    body.page-id-48 .main-navigation,
+    body.page-id-48 .nav-menu,
+    body.page-id-48 .menu-toggle,
+    body.page-id-48 .ct-header,
+    body.page-id-48 header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 9999 !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    /* Add top padding to content to account for fixed header in landscape */
+    body.page-id-48 .signup-page,
+    body.page-id-48 .ct-main,
+    body.page-id-48 .entry-content {
+        padding-top: 60px !important;
     }
 }
 
