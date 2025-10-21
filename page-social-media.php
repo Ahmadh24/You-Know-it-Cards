@@ -126,7 +126,7 @@ get_header(); ?>
 }
 
 .social-card.whatnot:hover {
-    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
 }
 
 /* RESPONSIVE DESIGN */
