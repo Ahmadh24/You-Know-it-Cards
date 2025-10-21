@@ -6300,39 +6300,6 @@ html, body, .site, .ct-main {
         background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
         background-size: auto !important;
     }
-    
-    /* FORCE HEADER TO TOP ON ALL MOBILE PAGES */
-    .site-header,
-    .main-navigation,
-    .nav-menu,
-    .menu-toggle,
-    .ct-header,
-    header,
-    .header,
-    .site-header-inner,
-    .ct-header-inner {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        z-index: 9999 !important;
-        background: rgba(0, 0, 0, 0.9) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        margin: 0 !important;
-        padding: 10px 20px !important;
-    }
-    
-    /* Add top padding to all content to account for fixed header */
-    .ct-main,
-    .entry-content,
-    .signup-page,
-    .hero-section,
-    .category-section,
-    .events-section {
-        padding-top: 80px !important;
-        margin-top: 0 !important;
-    }
 }
 
 /* LANDSCAPE MOBILE BRICK BACKGROUND - GLOBAL */
