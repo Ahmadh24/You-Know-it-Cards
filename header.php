@@ -35,10 +35,47 @@
     
     /* MOBILE NAVIGATION */
     @media screen and (max-width: 768px) {
+        .ct-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .site-branding {
+            order: 1;
+            flex: 1;
+        }
+        
+        .main-navigation {
+            order: 3;
+            width: 100%;
+            position: relative;
+        }
+        
+        .header-signup {
+            order: 2;
+            flex: 0 0 auto;
+        }
+        
         .nav-menu {
             flex-direction: column;
             gap: 8px;
             width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 0 0 15px 15px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .nav-menu.active {
+            display: flex;
         }
         
         .nav-menu li a {
@@ -46,23 +83,6 @@
             padding: 10px 15px;
             text-align: center;
             display: block;
-        }
-        
-        .main-navigation {
-            width: 100%;
-        }
-        
-        .ct-container {
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .site-branding {
-            text-align: center;
-        }
-        
-        .header-signup {
-            text-align: center;
         }
     }
     
@@ -87,51 +107,113 @@
         cursor: pointer;
         padding: 10px;
         display: none;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        z-index: 1001;
+        pointer-events: auto;
+        touch-action: manipulation;
+    }
+    
+    .menu-toggle-icon {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+    }
+    
+    .menu-toggle-icon::before,
+    .menu-toggle-icon::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+    
+    .menu-toggle-icon::before {
+        top: -6px;
+    }
+    
+    .menu-toggle-icon::after {
+        top: 6px;
+    }
+    
+    .menu-toggle.active .menu-toggle-icon {
+        background: transparent;
+    }
+    
+    .menu-toggle.active .menu-toggle-icon::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    .menu-toggle.active .menu-toggle-icon::after {
+        transform: rotate(-45deg);
+        top: 0;
     }
     
     @media screen and (max-width: 768px) {
         .menu-toggle {
             display: block;
         }
-        
-        .nav-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 0 0 15px 15px;
-            z-index: 1000;
-        }
-        
-        .nav-menu.active {
-            display: flex;
-        }
     }
     </style>
     
     <script>
+    // Simple mobile menu toggle
+    function toggleMobileMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        const menuToggle = document.querySelector('.menu-toggle');
+        
+        if (navMenu && menuToggle) {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            
+            const isActive = navMenu.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isActive);
+        }
+    }
+    
     document.addEventListener('DOMContentLoaded', function() {
+        console.log('Mobile menu script loaded');
+        
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
         
+        console.log('Menu toggle found:', menuToggle);
+        console.log('Nav menu found:', navMenu);
+        
         if (menuToggle && navMenu) {
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                const isActive = navMenu.classList.contains('active');
-                menuToggle.setAttribute('aria-expanded', isActive);
-            });
+            // Multiple event listeners for better compatibility
+            menuToggle.addEventListener('click', toggleMobileMenu);
+            menuToggle.addEventListener('touchstart', toggleMobileMenu);
             
             // Close menu when clicking outside
             document.addEventListener('click', function(event) {
                 if (!menuToggle.contains(event.target) && !navMenu.contains(event.target)) {
                     navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
                     menuToggle.setAttribute('aria-expanded', 'false');
                 }
             });
+            
+            // Close menu when clicking on a link
+            navMenu.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        } else {
+            console.log('Menu elements not found');
         }
     });
     </script>
