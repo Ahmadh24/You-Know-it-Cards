@@ -155,34 +155,12 @@ get_header(); ?>
     
     </div>
     
-    <!-- Content below banner -->
-    <div class="hero-content-below-banner">
-        <p class="hero-subtitle">Your premier destination for Pokémon, One Piece, and Sports cards</p>
-        
-        <div class="hero-buttons">
-            <a href="#cards" class="btn btn-primary btn-glow">
-                <span class="btn-text">Explore Cards</span>
-                <span class="btn-icon">→</span>
-            </a>
-            <a href="#contact" class="btn btn-secondary btn-glow">
-                <span class="btn-text">Visit Store</span>
-                <span class="btn-icon">→</span>
-            </a>
-        </div>
-    </div>
+    <!-- Content below banner removed -->
 </section>
 
 
 
-<!-- Categories Section -->
-<section id="cards" class="category-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Our Card Collections</h2>
-            <p class="section-subtitle">Discover amazing cards from your favorite franchises and sports</p>
-        </div>
-    </div>
-</section>
+<!-- Categories section removed -->
 
 <!-- Category card sections removed (have dedicated pages) -->
 
