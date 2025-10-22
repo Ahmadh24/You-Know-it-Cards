@@ -6301,12 +6301,30 @@ html, body, .site, .ct-main {
         background-size: auto !important;
     }
     
-    /* REMOVE BRICK BACKGROUND FROM SOCIAL MEDIA PAGE */
+    /* REMOVE BRICK BACKGROUND FROM SOCIAL MEDIA PAGE - ULTRA AGGRESSIVE */
     body.page-social-media html,
     body.page-social-media body,
     body.page-social-media .site,
     body.page-social-media .ct-main,
-    body.page-social-media .social-media-page {
+    body.page-social-media .social-media-page,
+    body.page-social-media .ct-container,
+    body.page-social-media .ct-content,
+    body.page-social-media .entry-content,
+    body.page-social-media .wp-block-group,
+    body.page-social-media [data-overlay],
+    .social-media-page,
+    .social-media-page *,
+    .social-media-grid,
+    .social-media-grid * {
+        background: none !important;
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+    
+    /* Force social media page to have no background at all */
+    body.page-social-media,
+    body.page-social-media::before,
+    body.page-social-media::after {
         background: none !important;
         background-color: transparent !important;
         background-image: none !important;
@@ -6320,12 +6338,30 @@ html, body, .site, .ct-main {
         background-size: auto !important;
     }
     
-    /* REMOVE BRICK BACKGROUND FROM SOCIAL MEDIA PAGE IN LANDSCAPE */
+    /* REMOVE BRICK BACKGROUND FROM SOCIAL MEDIA PAGE IN LANDSCAPE - ULTRA AGGRESSIVE */
     body.page-social-media html,
     body.page-social-media body,
     body.page-social-media .site,
     body.page-social-media .ct-main,
-    body.page-social-media .social-media-page {
+    body.page-social-media .social-media-page,
+    body.page-social-media .ct-container,
+    body.page-social-media .ct-content,
+    body.page-social-media .entry-content,
+    body.page-social-media .wp-block-group,
+    body.page-social-media [data-overlay],
+    .social-media-page,
+    .social-media-page *,
+    .social-media-grid,
+    .social-media-grid * {
+        background: none !important;
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+    
+    /* Force social media page to have no background at all in landscape */
+    body.page-social-media,
+    body.page-social-media::before,
+    body.page-social-media::after {
         background: none !important;
         background-color: transparent !important;
         background-image: none !important;
