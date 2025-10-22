@@ -8,75 +8,22 @@
 get_header(); ?>
 
 <style>
-/* REMOVE ALL BRICK BACKGROUNDS - ULTRA AGGRESSIVE - CACHE BUST: 2025-01-22-15:30 */
-html, body, .site, .ct-main, .ct-container, .ct-content, .entry-content, .wp-block-group, [data-overlay] {
-    background: none !important;
-    background-color: transparent !important;
-    background-image: none !important;
-}
-
-/* MOBILE - FORCE NO BACKGROUND */
+/* MOBILE BRICK BACKGROUND - INLINE CSS */
 @media screen and (max-width: 768px) {
-    html, body, .site, .ct-main, .ct-container, .ct-content, .entry-content, .wp-block-group, [data-overlay] {
-        background: none !important;
-        background-color: transparent !important;
-        background-image: none !important;
-    }
-    
-    /* REMOVE BRICK BACKGROUND FROM CT-CONTAINER SPECIFICALLY */
-    .ct-container {
-        background: none !important;
-        background-color: transparent !important;
-        background-image: none !important;
-        background-attachment: scroll !important;
-        background-position: initial !important;
-        background-size: initial !important;
-        background-repeat: initial !important;
-    }
-    
-    /* Target ct-container pseudo-elements */
-    .ct-container::before,
-    .ct-container::after {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        background: none !important;
-        background-image: none !important;
-        background-color: transparent !important;
-    }
-    
-    /* REMOVE FIXED/ABSOLUTE POSITIONED BRICK OVERLAY */
-    * {
-        background-attachment: scroll !important;
-        background-position: initial !important;
-        background-size: initial !important;
-        background-repeat: initial !important;
-    }
-    
-    /* Target any fixed positioned elements that might be the brick overlay */
-    html::before, body::before, .site::before, .ct-main::before,
-    html::after, body::after, .site::after, .ct-main::after {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-    }
-    
-    /* Force all pseudo-elements to be transparent */
-    *::before, *::after {
-        background: none !important;
-        background-image: none !important;
-        background-color: transparent !important;
+    html, body {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
     }
 }
 
-/* LANDSCAPE - FORCE NO BACKGROUND */
+/* LANDSCAPE MOBILE BRICK BACKGROUND */
 @media screen and (max-height: 500px) and (orientation: landscape) {
-    html, body, .site, .ct-main, .ct-container, .ct-content, .entry-content, .wp-block-group, [data-overlay] {
-        background: none !important;
-        background-color: transparent !important;
-        background-image: none !important;
+    html, body {
+        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
+        background-size: auto !important;
     }
 }
+
 
 /* SOCIAL MEDIA PAGE STYLES */
 .social-media-page {
