@@ -129,26 +129,35 @@ get_header(); ?>
     background: linear-gradient(45deg, #ffd700, #ffed4e);
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN - ULTRA AGGRESSIVE */
 @media screen and (max-width: 768px) {
     .social-media-page {
         padding: 40px 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .social-media-header {
         margin-bottom: 40px !important;
         padding: 0 20px !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .social-media-header h1 {
         font-size: 2.5rem !important;
         margin-bottom: 15px !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .social-media-header p {
         font-size: 1rem !important;
         padding: 0 20px !important;
         margin: 0 auto !important;
+        display: block !important;
+        visibility: visible !important;
     }
     
     .social-media-grid {
@@ -159,39 +168,63 @@ get_header(); ?>
         padding: 0 15px !important;
         max-width: 100% !important;
         margin: 0 auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        min-height: auto !important;
     }
     
     .social-card {
         padding: 30px 20px !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 auto !important;
+        margin: 0 auto 20px !important;
         display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 1 !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 20px !important;
+        text-align: center !important;
+        color: #fff !important;
+        text-decoration: none !important;
     }
     
     .social-icon {
         width: 60px !important;
         height: 60px !important;
         margin: 0 auto 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        visibility: visible !important;
     }
     
     .social-icon svg {
         width: 30px !important;
         height: 30px !important;
+        visibility: visible !important;
     }
     
     .social-card h3 {
         font-size: 1.3rem !important;
         margin-bottom: 15px !important;
+        color: #fff !important;
+        visibility: visible !important;
     }
     
     .social-card p {
         font-size: 0.9rem !important;
         margin-bottom: 20px !important;
+        color: #ccc !important;
+        visibility: visible !important;
     }
     
     .social-handle {
         font-size: 1rem !important;
+        color: #ffd700 !important;
+        visibility: visible !important;
     }
 }
 
