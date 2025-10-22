@@ -132,54 +132,86 @@ get_header(); ?>
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
     .social-media-page {
-        padding: 40px 0;
+        padding: 40px 0 !important;
+    }
+    
+    .social-media-header {
+        margin-bottom: 40px !important;
+        padding: 0 20px !important;
     }
     
     .social-media-header h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem !important;
+        margin-bottom: 15px !important;
     }
     
     .social-media-header p {
-        font-size: 1rem;
-        padding: 0 20px;
+        font-size: 1rem !important;
+        padding: 0 20px !important;
+        margin: 0 auto !important;
     }
     
     .social-media-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 15px;
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        gap: 20px !important;
+        padding: 0 15px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
     }
     
     .social-card {
-        padding: 30px 20px;
+        padding: 30px 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        display: block !important;
     }
     
     .social-icon {
-        width: 60px;
-        height: 60px;
+        width: 60px !important;
+        height: 60px !important;
+        margin: 0 auto 20px !important;
     }
     
     .social-icon svg {
-        width: 30px;
-        height: 30px;
+        width: 30px !important;
+        height: 30px !important;
     }
     
     .social-card h3 {
-        font-size: 1.3rem;
+        font-size: 1.3rem !important;
+        margin-bottom: 15px !important;
     }
     
     .social-card p {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .social-handle {
+        font-size: 1rem !important;
     }
 }
 
 @media screen and (max-width: 480px) {
     .social-media-header h1 {
-        font-size: 2rem;
+        font-size: 2rem !important;
+    }
+    
+    .social-media-header p {
+        font-size: 0.9rem !important;
+        padding: 0 15px !important;
     }
     
     .social-card {
-        padding: 25px 15px;
+        padding: 25px 15px !important;
+    }
+    
+    .social-media-grid {
+        padding: 0 10px !important;
+        gap: 15px !important;
     }
 }
 </style>
