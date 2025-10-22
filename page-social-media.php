@@ -8,21 +8,7 @@
 get_header(); ?>
 
 <style>
-/* MOBILE BRICK BACKGROUND - INLINE CSS */
-@media screen and (max-width: 768px) {
-    html, body {
-        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
-        background-size: auto !important;
-    }
-}
-
-/* LANDSCAPE MOBILE BRICK BACKGROUND */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    html, body {
-        background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
-        background-size: auto !important;
-    }
-}
+/* REMOVE DUPLICATE BRICK BACKGROUND - Let global CSS handle it */
 
 /* SOCIAL MEDIA PAGE STYLES */
 .social-media-page {
@@ -69,6 +55,8 @@ get_header(); ?>
     text-decoration: none;
     color: #fff;
     display: block;
+    position: relative;
+    z-index: 10;
 }
 
 .social-card:hover {
@@ -183,12 +171,14 @@ get_header(); ?>
         visibility: visible !important;
         opacity: 1 !important;
         position: relative !important;
-        z-index: 1 !important;
-        background: rgba(255, 255, 255, 0.1) !important;
+        z-index: 100 !important;
+        background: rgba(255, 255, 255, 0.2) !important;
         border-radius: 20px !important;
         text-align: center !important;
         color: #fff !important;
         text-decoration: none !important;
+        backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
     }
     
     .social-icon {
