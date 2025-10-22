@@ -6300,6 +6300,17 @@ html, body, .site, .ct-main {
         background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
         background-size: auto !important;
     }
+    
+    /* REMOVE BRICK BACKGROUND FROM SOCIAL MEDIA PAGE */
+    body.page-social-media html,
+    body.page-social-media body,
+    body.page-social-media .site,
+    body.page-social-media .ct-main,
+    body.page-social-media .social-media-page {
+        background: none !important;
+        background-color: transparent !important;
+        background-image: none !important;
+    }
 }
 
 /* LANDSCAPE MOBILE BRICK BACKGROUND - GLOBAL */
@@ -6307,6 +6318,17 @@ html, body, .site, .ct-main {
     html, body {
         background: url('https://youknowitcards.net/wp-content/uploads/2025/09/brickwall.png') center center scroll repeat !important;
         background-size: auto !important;
+    }
+    
+    /* REMOVE BRICK BACKGROUND FROM SOCIAL MEDIA PAGE IN LANDSCAPE */
+    body.page-social-media html,
+    body.page-social-media body,
+    body.page-social-media .site,
+    body.page-social-media .ct-main,
+    body.page-social-media .social-media-page {
+        background: none !important;
+        background-color: transparent !important;
+        background-image: none !important;
     }
     
     /* Center content in landscape mode */
