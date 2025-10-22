@@ -23,6 +23,28 @@ html, body, .site, .ct-main, .ct-container, .ct-content, .entry-content, .wp-blo
         background-image: none !important;
     }
     
+    /* REMOVE BRICK BACKGROUND FROM CT-CONTAINER SPECIFICALLY */
+    .ct-container {
+        background: none !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        background-attachment: scroll !important;
+        background-position: initial !important;
+        background-size: initial !important;
+        background-repeat: initial !important;
+    }
+    
+    /* Target ct-container pseudo-elements */
+    .ct-container::before,
+    .ct-container::after {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        background: none !important;
+        background-image: none !important;
+        background-color: transparent !important;
+    }
+    
     /* REMOVE FIXED/ABSOLUTE POSITIONED BRICK OVERLAY */
     * {
         background-attachment: scroll !important;
