@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <style>
-/* REMOVE ALL BRICK BACKGROUNDS - ULTRA AGGRESSIVE */
+/* REMOVE ALL BRICK BACKGROUNDS - ULTRA AGGRESSIVE - CACHE BUST: 2025-01-22-15:30 */
 html, body, .site, .ct-main, .ct-container, .ct-content, .entry-content, .wp-block-group, [data-overlay] {
     background: none !important;
     background-color: transparent !important;
