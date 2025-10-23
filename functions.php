@@ -1470,6 +1470,11 @@ function handle_user_signup() {
     
     // Debug: Log that signup form was submitted
     error_log('Signup form submitted - processing...');
+    
+    // Debug: Show on screen for testing (remove this later)
+    if (isset($_GET['debug_signup'])) {
+        echo '<div style="background: orange; color: white; padding: 20px; margin: 20px;">SIGNUP FORM PROCESSING...</div>';
+    }
 
     // Get form data
     $user_email = sanitize_email($_POST['user_email']);
