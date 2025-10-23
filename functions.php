@@ -1467,6 +1467,9 @@ function handle_user_signup() {
     if (!isset($_POST['signup_nonce']) || !wp_verify_nonce($_POST['signup_nonce'], 'user_signup_nonce')) {
         return;
     }
+    
+    // Debug: Log that signup form was submitted
+    error_log('Signup form submitted - processing...');
 
     // Get form data
     $user_email = sanitize_email($_POST['user_email']);
@@ -1536,7 +1539,19 @@ function handle_user_signup() {
         'Content-Type: text/plain; charset=UTF-8'
     );
 
-    wp_mail($user_email, $subject, $message, $headers);
+    // Debug: Log email attempt
+    error_log('Attempting to send welcome email to: ' . $user_email);
+    error_log('Email subject: ' . $subject);
+    error_log('Email message: ' . $message);
+    
+    $email_sent = wp_mail($user_email, $subject, $message, $headers);
+    
+    // Debug: Log result
+    if ($email_sent) {
+        error_log('Welcome email sent successfully to: ' . $user_email);
+    } else {
+        error_log('Welcome email FAILED to send to: ' . $user_email);
+    }
 
     // Redirect to success page
     wp_redirect(home_url('/signup-success/'));
@@ -1621,7 +1636,19 @@ function handle_ajax_signup() {
         'Content-Type: text/plain; charset=UTF-8'
     );
 
-    wp_mail($user_email, $subject, $message, $headers);
+    // Debug: Log email attempt
+    error_log('Attempting to send welcome email to: ' . $user_email);
+    error_log('Email subject: ' . $subject);
+    error_log('Email message: ' . $message);
+    
+    $email_sent = wp_mail($user_email, $subject, $message, $headers);
+    
+    // Debug: Log result
+    if ($email_sent) {
+        error_log('Welcome email sent successfully to: ' . $user_email);
+    } else {
+        error_log('Welcome email FAILED to send to: ' . $user_email);
+    }
 
     // Send success response
     wp_send_json_success(array(
