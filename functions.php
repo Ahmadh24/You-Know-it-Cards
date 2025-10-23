@@ -2097,3 +2097,21 @@ function save_sponsor_meta_box($post_id) {
     update_post_meta($post_id, '_sponsor_featured', $featured);
 }
 add_action('save_post', 'save_sponsor_meta_box');
+
+// Test email function - add this temporarily to test if emails work
+function test_email_function() {
+    if (isset($_GET['test_email']) && current_user_can('administrator')) {
+        $test_email = get_option('admin_email');
+        $subject = 'Test Email from You Know It Cards';
+        $message = 'This is a test email to check if WordPress emails are working.';
+        
+        $sent = wp_mail($test_email, $subject, $message);
+        
+        if ($sent) {
+            echo '<div style="background: green; color: white; padding: 20px; margin: 20px;">✅ Email sent successfully!</div>';
+        } else {
+            echo '<div style="background: red; color: white; padding: 20px; margin: 20px;">❌ Email failed to send. Check server email configuration.</div>';
+        }
+    }
+}
+add_action('wp_head', 'test_email_function');
