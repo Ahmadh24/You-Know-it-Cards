@@ -45,7 +45,7 @@ get_header(); ?>
         </div>
 
         <div class="signup-form-container">
-            <form id="user-signup-form" class="signup-form" method="post" action="">
+            <form id="user-signup-form" class="signup-form" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
                 <?php wp_nonce_field('user_signup_nonce', 'signup_nonce'); ?>
                 
                 <div class="form-group">

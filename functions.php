@@ -1463,6 +1463,11 @@ function ykic_save_meta($post_id) {
 
 // Handle user signup form submission
 function handle_user_signup() {
+    // Debug: Check if any POST data exists
+    if (isset($_POST) && !empty($_POST)) {
+        error_log('POST data received: ' . print_r($_POST, true));
+    }
+    
     // Check if form was submitted
     if (!isset($_POST['signup_nonce']) || !wp_verify_nonce($_POST['signup_nonce'], 'user_signup_nonce')) {
         return;
