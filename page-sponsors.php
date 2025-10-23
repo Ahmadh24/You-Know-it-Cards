@@ -51,8 +51,8 @@ get_header(); ?>
 
 .sponsors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -61,7 +61,7 @@ get_header(); ?>
 .sponsor-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 40px 30px;
+    padding: 25px 20px;
     text-align: center;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
@@ -71,6 +71,10 @@ get_header(); ?>
     display: block;
     position: relative;
     z-index: 10;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sponsor-card:hover {
@@ -172,21 +176,23 @@ get_header(); ?>
     }
     
     .sponsors-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        grid-template-columns: none !important;
-        gap: 20px !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+        gap: 15px !important;
         padding: 0 15px !important;
         max-width: 100% !important;
         margin: 0 auto !important;
     }
     
     .sponsor-card {
-        padding: 30px 20px !important;
+        padding: 20px 15px !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 auto 20px !important;
-        display: block !important;
+        margin: 0 !important;
+        display: flex !important;
+        aspect-ratio: 1 !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
     
     .sponsor-logo {
@@ -212,12 +218,29 @@ get_header(); ?>
     }
     
     .sponsor-card {
-        padding: 25px 15px !important;
+        padding: 15px 10px !important;
     }
     
     .sponsors-grid {
         padding: 0 10px !important;
-        gap: 15px !important;
+        gap: 10px !important;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+    }
+    
+    .sponsor-logo {
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 auto 15px !important;
+    }
+    
+    .sponsor-card h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .sponsor-card p {
+        font-size: 0.8rem !important;
+        margin-bottom: 15px !important;
     }
 }
 </style>
