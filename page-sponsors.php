@@ -53,7 +53,7 @@ get_header(); ?>
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 0 20px;
 }
