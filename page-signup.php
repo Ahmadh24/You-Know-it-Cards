@@ -5,6 +5,9 @@
  * Custom signup page for YouKnowItCards
  */
 
+// Process signup form submission
+handle_user_signup();
+
 get_header(); ?>
 
 <style>
