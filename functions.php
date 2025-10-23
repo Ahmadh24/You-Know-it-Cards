@@ -955,6 +955,7 @@ function ykic_default_menu() {
     echo '<li><a href="' . get_post_type_archive_link('store_events') . '">Events</a></li>';
     echo '<li><a href="' . home_url('/about/') . '">About</a></li>';
     echo '<li><a href="' . home_url('/social-media/') . '">Social</a></li>';
+    echo '<li><a href="' . home_url('/sponsors/') . '">Sponsors</a></li>';
     echo '</ul>';
 }
 
@@ -988,6 +989,33 @@ add_action( 'init', function() {
         
         if ( $page_id ) {
             update_post_meta( $page_id, '_wp_page_template', 'page-social-media.php' );
+        }
+    }
+});
+
+// Create Sponsors page if it doesn't exist
+add_action( 'init', function() {
+    $page_title = 'Sponsors';
+    $page_slug = 'sponsors';
+    
+    // Check if page already exists
+    $existing_page = get_page_by_path( $page_slug );
+    
+    if ( ! $existing_page ) {
+        $page_data = array(
+            'post_title'    => $page_title,
+            'post_name'     => $page_slug,
+            'post_content'  => 'Support our partners and save money with exclusive discount codes!',
+            'post_status'   => 'publish',
+            'post_type'     => 'page',
+            'post_author'   => 1,
+            'page_template' => 'page-sponsors.php'
+        );
+        
+        $page_id = wp_insert_post( $page_data );
+        
+        if ( $page_id ) {
+            update_post_meta( $page_id, '_wp_page_template', 'page-sponsors.php' );
         }
     }
 });
@@ -1956,3 +1984,116 @@ function add_mobile_background_css() {
     }
 }
 add_action('wp_head', 'add_mobile_background_css', 999);
+
+// Custom Post Type: Sponsors
+function create_sponsors_post_type() {
+    register_post_type('sponsors',
+        array(
+            'labels' => array(
+                'name' => 'Sponsors',
+                'singular_name' => 'Sponsor',
+                'add_new' => 'Add New Sponsor',
+                'add_new_item' => 'Add New Sponsor',
+                'edit_item' => 'Edit Sponsor',
+                'new_item' => 'New Sponsor',
+                'view_item' => 'View Sponsor',
+                'search_items' => 'Search Sponsors',
+                'not_found' => 'No sponsors found',
+                'not_found_in_trash' => 'No sponsors found in trash'
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'editor', 'thumbnail'),
+            'menu_icon' => 'dashicons-star-filled',
+            'show_in_menu' => true,
+            'show_in_nav_menus' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => false,
+            'capability_type' => 'post',
+            'hierarchical' => false,
+            'rewrite' => array('slug' => 'sponsors'),
+            'query_var' => true,
+        )
+    );
+}
+add_action('init', 'create_sponsors_post_type');
+
+// Add custom fields for sponsors
+function add_sponsor_meta_boxes() {
+    add_meta_box(
+        'sponsor_details',
+        'Sponsor Details',
+        'sponsor_details_callback',
+        'sponsors',
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'add_sponsor_meta_boxes');
+
+function sponsor_details_callback($post) {
+    wp_nonce_field('sponsor_meta_box', 'sponsor_meta_box_nonce');
+    
+    $website_url = get_post_meta($post->ID, '_sponsor_website_url', true);
+    $discount_code = get_post_meta($post->ID, '_sponsor_discount_code', true);
+    $discount_percentage = get_post_meta($post->ID, '_sponsor_discount_percentage', true);
+    $description = get_post_meta($post->ID, '_sponsor_description', true);
+    $featured = get_post_meta($post->ID, '_sponsor_featured', true);
+    
+    echo '<table class="form-table">';
+    echo '<tr>';
+    echo '<th><label for="sponsor_website_url">Website URL</label></th>';
+    echo '<td><input type="url" id="sponsor_website_url" name="sponsor_website_url" value="' . esc_attr($website_url) . '" style="width: 100%;" placeholder="https://example.com" /></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th><label for="sponsor_discount_code">Discount Code</label></th>';
+    echo '<td><input type="text" id="sponsor_discount_code" name="sponsor_discount_code" value="' . esc_attr($discount_code) . '" style="width: 100%;" placeholder="SAVE20" /></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th><label for="sponsor_discount_percentage">Discount Percentage</label></th>';
+    echo '<td><input type="number" id="sponsor_discount_percentage" name="sponsor_discount_percentage" value="' . esc_attr($discount_percentage) . '" min="0" max="100" style="width: 100px;" placeholder="20" />%</td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th><label for="sponsor_description">Short Description</label></th>';
+    echo '<td><textarea id="sponsor_description" name="sponsor_description" rows="3" style="width: 100%;" placeholder="Brief description of what this sponsor offers...">' . esc_textarea($description) . '</textarea></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th><label for="sponsor_featured">Featured Sponsor</label></th>';
+    echo '<td><input type="checkbox" id="sponsor_featured" name="sponsor_featured" value="1" ' . checked($featured, 1, false) . ' /> <label for="sponsor_featured">Show as featured sponsor</label></td>';
+    echo '</tr>';
+    echo '</table>';
+}
+
+function save_sponsor_meta_box($post_id) {
+    if (!isset($_POST['sponsor_meta_box_nonce']) || !wp_verify_nonce($_POST['sponsor_meta_box_nonce'], 'sponsor_meta_box')) {
+        return;
+    }
+    
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+    
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+    
+    if (isset($_POST['sponsor_website_url'])) {
+        update_post_meta($post_id, '_sponsor_website_url', sanitize_url($_POST['sponsor_website_url']));
+    }
+    
+    if (isset($_POST['sponsor_discount_code'])) {
+        update_post_meta($post_id, '_sponsor_discount_code', sanitize_text_field($_POST['sponsor_discount_code']));
+    }
+    
+    if (isset($_POST['sponsor_discount_percentage'])) {
+        update_post_meta($post_id, '_sponsor_discount_percentage', intval($_POST['sponsor_discount_percentage']));
+    }
+    
+    if (isset($_POST['sponsor_description'])) {
+        update_post_meta($post_id, '_sponsor_description', sanitize_textarea_field($_POST['sponsor_description']));
+    }
+    
+    $featured = isset($_POST['sponsor_featured']) ? 1 : 0;
+    update_post_meta($post_id, '_sponsor_featured', $featured);
+}
+add_action('save_post', 'save_sponsor_meta_box');
