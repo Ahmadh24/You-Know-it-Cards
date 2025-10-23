@@ -1527,7 +1527,16 @@ function handle_user_signup() {
     $message .= "Thank you for joining our community!\n\n";
     $message .= "Best regards,\nThe You Know It Cards Team";
 
-    wp_mail($user_email, $subject, $message);
+    // Set proper email headers
+    $site_name = get_option('blogname');
+    $from_email = get_option('admin_email');
+    $headers = array(
+        'From: ' . $site_name . ' <' . $from_email . '>',
+        'Reply-To: ' . $from_email,
+        'Content-Type: text/plain; charset=UTF-8'
+    );
+
+    wp_mail($user_email, $subject, $message, $headers);
 
     // Redirect to success page
     wp_redirect(home_url('/signup-success/'));
@@ -1603,7 +1612,16 @@ function handle_ajax_signup() {
     $message .= "Thank you for joining our community!\n\n";
     $message .= "Best regards,\nThe You Know It Cards Team";
 
-    wp_mail($user_email, $subject, $message);
+    // Set proper email headers
+    $site_name = get_option('blogname');
+    $from_email = get_option('admin_email');
+    $headers = array(
+        'From: ' . $site_name . ' <' . $from_email . '>',
+        'Reply-To: ' . $from_email,
+        'Content-Type: text/plain; charset=UTF-8'
+    );
+
+    wp_mail($user_email, $subject, $message, $headers);
 
     // Send success response
     wp_send_json_success(array(
@@ -2102,10 +2120,28 @@ add_action('save_post', 'save_sponsor_meta_box');
 function test_email_function() {
     if (isset($_GET['test_email']) && current_user_can('administrator')) {
         $test_email = get_option('admin_email');
+        $from_email = get_option('admin_email');
+        $site_name = get_option('blogname');
+        
+        // Show current email settings
+        echo '<div style="background: blue; color: white; padding: 20px; margin: 20px;">';
+        echo '<h3>Current Email Settings:</h3>';
+        echo '<strong>Admin Email:</strong> ' . $from_email . '<br>';
+        echo '<strong>Site Name:</strong> ' . $site_name . '<br>';
+        echo '<strong>From Address:</strong> ' . $from_email . '<br>';
+        echo '</div>';
+        
         $subject = 'Test Email from You Know It Cards';
         $message = 'This is a test email to check if WordPress emails are working.';
         
-        $sent = wp_mail($test_email, $subject, $message);
+        // Set proper headers
+        $headers = array(
+            'From: ' . $site_name . ' <' . $from_email . '>',
+            'Reply-To: ' . $from_email,
+            'Content-Type: text/plain; charset=UTF-8'
+        );
+        
+        $sent = wp_mail($test_email, $subject, $message, $headers);
         
         if ($sent) {
             echo '<div style="background: green; color: white; padding: 20px; margin: 20px;">✅ Email sent successfully!</div>';
