@@ -6,6 +6,10 @@
  */
 
 // Process signup form submission
+error_log('Signup page loaded - checking for form submission');
+if (isset($_POST) && !empty($_POST)) {
+    error_log('POST data detected on signup page: ' . print_r($_POST, true));
+}
 handle_user_signup();
 
 get_header(); ?>
@@ -45,6 +49,11 @@ get_header(); ?>
         <div class="signup-header">
             <h1>Join You Know It Cards</h1>
             <p>Get exclusive access to new products, events, and trading tips!</p>
+            <?php if (isset($_GET['debug_signup'])): ?>
+                <div style="background: red; color: white; padding: 10px; margin: 10px 0;">
+                    DEBUG: Signup page loaded at <?php echo date('Y-m-d H:i:s'); ?>
+                </div>
+            <?php endif; ?>
         </div>
 
         <div class="signup-form-container">
